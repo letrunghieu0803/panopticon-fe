@@ -7,7 +7,7 @@ import { Button } from "antd";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useAppDispatch, useAppSelector } from "@/redux/hooks";
-import { useEffect, useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useGetMeQuery } from "@/redux/endpoints/auth";
 import { reset, updateUserInfo } from "@/redux/slices/auth.slide";
 
@@ -15,10 +15,16 @@ export default function Profile() {
   const router = useRouter();
   const dataUser = useAppSelector((state) => state.auth?.userInfo);
   const dispatch = useAppDispatch();
-  const accessToken = window?.localStorage?.getItem("accessToken");
+  const [accessToken, setAccessToken] = useState<string | null>(null);
   const { data, isLoading } = useGetMeQuery({}, { skip: !accessToken });
   console.log("useGetMeQuery", data, isLoading);
   console.log("dataRedux", dataUser);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setAccessToken(window.localStorage.getItem("accessToken"));
+    }
+  }, []);
 
   useEffect(() => {
     if (data?.user) {
@@ -33,8 +39,10 @@ export default function Profile() {
     { label: "서비스이용약관" },
   ];
   const handleLogout = () => {
-    window?.localStorage?.removeItem("accessToken");
-    window?.localStorage?.removeItem("refreshToken");
+    if (typeof window !== "undefined") {
+      window.localStorage.removeItem("accessToken");
+      window.localStorage.removeItem("refreshToken");
+    }
     dispatch(reset());
     router.push("/login");
   };

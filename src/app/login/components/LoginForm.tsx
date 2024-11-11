@@ -1,7 +1,5 @@
 import CustomInput from "@/components/common/CustomInput";
-import {
-  openNotificationFail
-} from "@/components/Notification";
+import { openNotificationFail } from "@/components/Notification";
 import { useHandleLoginMutation } from "@/redux/endpoints/auth";
 import { useAppDispatch } from "@/redux/hooks";
 import {
@@ -25,9 +23,11 @@ export default function LoginForm() {
     if (res?.data?.status === "success") {
       dispatch(updateAccessToken(res?.data?.access_token));
       dispatch(updateRefreshToken(res?.data?.refresh_token));
-      window.localStorage.setItem("accessToken", res?.data?.access_token);
-      window.localStorage.setItem("refreshToken", res?.data?.refresh_token);
-      router.push("/profile");
+      if (typeof window !== "undefined") {
+        window.localStorage.setItem("accessToken", res?.data?.access_token);
+        window.localStorage.setItem("refreshToken", res?.data?.refresh_token);
+        router.push("/profile");
+      }
     } else {
       openNotificationFail((res?.error as any)?.data?.detail);
     }
