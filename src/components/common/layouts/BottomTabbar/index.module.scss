@@ -1,0 +1,13 @@
+.text {
+  :global {
+    margin-top: 3px;
+    font-size: 10px;
+    color: #1c1c2766;
+  }
+}
+
+.textActive {
+  :global {
+    color: #1c1c27cc;
+  }
+}

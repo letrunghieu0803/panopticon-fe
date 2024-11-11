@@ -1,0 +1,117 @@
+:root {
+  --foreground-rgb: rgb(0, 0, 0);
+  /* // Colors */
+  --primaryColor-1: #edf2ff;
+  --primaryColor-2: #dfe8ff;
+  --primaryColor-3: #c4d3fe;
+  --primaryColor-4: #788aff;
+  --primaryColor-5: #5a64fa;
+  --primaryColor-6: #322fee;
+  --primaryColor-7: #342fd3;
+  --primaryColor-8: #342fd3;
+  --primaryColor-9: #2c29aa;
+  --primaryColor-10: #292b86;
+  --primaryColor: var(--primaryColor-6);
+  /* grey */
+  --grey-1: #f9fafc;
+  --grey-2: #ebf0f4;
+  --grey-3: #dbe4eb;
+  --grey-4: #bacbd9;
+  --grey-5: #99b2c7;
+  --grey-6: #6987a2;
+  --grey-7: #6987a2;
+  --grey-8: #5d758a;
+  --grey-9: #404e63;
+  --grey-10: #2a2e33;
+  --grey: var(--grey-6);
+  /* blue */
+  --blue-1: #f3faff;
+  --blue-2: #def1ff;
+  --blue-3: #bee4ff;
+  --blue-4: #98d4ff;
+  --blue-5: #48affa;
+  --blue-6: #0a8fef;
+  --blue-7: #0279cf;
+  --blue-8: #00538e;
+  --blue-9: #003d69;
+  --blue-10: #022035;
+  --blue: var(--blue-6);
+  /* green */
+  --green-1: #ebfbf1;
+  --green-2: #e1faea;
+  --green-3: #c1f4d4;
+  --green-4: #91ddad;
+  --green-5: #3bba6a;
+  --green-6: #14ad4d;
+  --green-7: #019939;
+  --green-8: #016626;
+  --green-9: #004d1d;
+  --green-10: #001a0a;
+  --green: var(--green-6);
+  /* yellow */
+  --yellow-1: #fffaea;
+  --yellow-2: #fff0c6;
+  --yellow-3: #fedf88;
+  --yellow-4: #ffc84a;
+  --yellow-5: #fdb023;
+  --yellow-6: #f79007;
+  --yellow-7: #dc6803;
+  --yellow-8: #b54706;
+  --yellow-9: #93370d;
+  --yellow-10: #271902;
+  --yellow: var(--yellow-6);
+  /* red */
+  --red-1: #feebeb;
+  --red-2: #ffe3e3;
+  --red-3: #ffc9c9;
+  --red-4: #faa4a4;
+  --red-5: #f75656;
+  --red-6: #f53535;
+  --red-7: #e12121;
+  --red-8: #961616;
+  --red-9: #711111;
+  --red-10: #260606;
+  --red: var(--red-6);
+
+  --orange-5: #eea16d;
+  /* background */
+  --background-1: #fafaff;
+  --background-2: #f4f4f5;
+  --background-3: #ffffff;
+
+  /* shadow hard */
+  --shadow-2xs: 0px 0px 0px 1px #edf2ff,
+    0px 2px 5px -2px rgba(46, 85, 255, 0.06),
+    0px 2px 7px 0px rgba(46, 85, 255, 0.05);
+  --shadow-xs: 0px 0px 0px 1px #edf2ff, 0px 2px 12px -1px rgba(46, 85, 255, 0.1),
+    0px 2px 2px -1px rgba(46, 85, 255, 0.04);
+  --shadow-s: 0px 0px 0px 1px #edf2ff, 0px 6px 16px 0px rgba(46, 85, 255, 0.08);
+  --shadow-m: 0px 0px 0px 1px #edf2ff,
+    0px 16px 24px -6px rgba(46, 85, 255, 0.08),
+    0px 3px 0px -1px rgba(46, 85, 255, 0.04);
+  --shadow-l: 0px 0px 0px 1px #edf2ff,
+    0px 27px 30px -15px rgba(46, 85, 255, 0.13),
+    0px 0px 3px -1px rgba(46, 85, 255, 0.04);
+  --shadow: var(var(--shadow-m));
+
+  /* shadow soft */
+  --shadow-soft-2xs: 0px 1.5px 4px 1px rgba(46, 85, 255, 0.07);
+  --shadow-soft-xs: 0px 5px 13px -5px rgba(46, 85, 255, 0.05),
+    0px 2px 4px 3px rgba(46, 85, 255, 0.02);
+  --shadow-soft-s: 0px 10px 18px 2px rgba(46, 85, 255, 0.07);
+  --shadow-soft-m: 0px 11px 24px -9px rgba(46, 85, 255, 0.14),
+    0px 3px 8px 1px rgba(46, 85, 255, 0.04);
+  --shadow-soft-l: 0px 32px 33px -15px rgba(46, 85, 255, 0.17),
+    0px 0px 3px 1px rgba(46, 85, 255, 0.04);
+  --shadow-soft: var(var(--shadow-soft-m));
+
+  /* Blur */
+  --blur-s: 4px;
+  --blur-m: 8px;
+  --blur-l: 12px;
+  --blur-xl: 20px;
+
+  /* Font size */
+  --base-text-font-size: 14px;
+  --base-title-font-size: 20px;
+}

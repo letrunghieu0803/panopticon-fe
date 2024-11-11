@@ -1,0 +1,60 @@
+{
+  "name": "fe_panopticon",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint . --ext ts,tsx,js",
+    "prepare": "husky install",
+    "lint:write": "next lint --cache --fix"
+  },
+  "dependencies": {
+    "@ant-design/icons": "5.3.6",
+    "@ant-design/nextjs-registry": "^1.0.0",
+    "@reduxjs/toolkit": "^2.2.3",
+    "antd": "^5.21.6",
+    "axios": "^1.7.7",
+    "i18next": "^23.10.1",
+    "i18next-http-backend": "^2.5.0",
+    "next": "14.1.4",
+    "next-redux-wrapper": "^8.1.0",
+    "qs": "^6.13.0",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-i18next": "^14.1.0",
+    "react-redux": "^9.1.0",
+    "react-share": "^5.1.0",
+    "react-usestateref": "^1.0.8",
+    "redux-persist": "^6.0.0",
+    "sass": "^1.75.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/qs": "^6.9.17",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "autoprefixer": "^10.0.1",
+    "eslint": "^8.57.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^16.2.0",
+    "eslint-config-next": "14.1.4",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^5.1.3",
+    "eslint-plugin-react": "^7.29.4",
+    "eslint-plugin-react-hooks": "^4.4.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "postcss": "^8",
+    "prettier": "3.2.5",
+    "tailwindcss": "^3.3.0",
+    "typescript": "^5"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,css,md}": "prettier --write"
+  }
+}

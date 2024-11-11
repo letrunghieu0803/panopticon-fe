@@ -1,0 +1,108 @@
+@import "./_variables.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  font-size: 14px;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+html * {
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: #1c1c27;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.ant-carousel .slick-prev,
+.ant-carousel .slick-next {
+  color: unset !important;
+  font-size: unset !important;
+}
+
+.ant-carousel .slick-prev:hover,
+.ant-carousel .slick-next:hover,
+.ant-carousel .slick-prev:focus,
+.ant-carousel .slick-next:focus {
+  color: unset !important;
+}
+
+.ant-carousel .slick-next {
+  inset-inline-end: 5px !important;
+}
+
+.ant-carousel .slick-next::before {
+  content: "" !important;
+}
+.ant-carousel .slick-prev {
+  inset-inline-start: 5px !important;
+  z-index: 1;
+}
+
+.ant-carousel .slick-prev::before {
+  content: "" !important;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
+}
+/* Tùy chỉnh placeholder */
+::placeholder {
+  color: #1c1c27 !important;
+  opacity: 1;
+}
+
+/* Tùy chỉnh placeholder cho các trình duyệt khác nhau */
+::-webkit-input-placeholder {
+  color: #1c1c27 !important;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: #1c1c27 !important;
+  opacity: 1;
+}
+
+::-ms-input-placeholder {
+  color: #1c1c27 !important;
+  opacity: 1;
+}
