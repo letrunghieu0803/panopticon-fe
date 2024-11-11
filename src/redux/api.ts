@@ -39,7 +39,7 @@ const axiosBaseQuery =
   > =>
   async ({ url, method, body, params, headers }, { signal }) => {
     try {
-      const currentLanguage = localStorage.getItem("lang");
+      const currentLanguage = window?.localStorage?.getItem("lang");
       const result = await axios({
         url: url.startsWith("http") ? url : baseUrl + url,
         method: method ?? "GET",
@@ -83,9 +83,9 @@ const baseQueryWithReauth =
   ): BaseQueryFn<FetchArgs, unknown, AxiosErrorDataType> =>
   async (args, api, extraOptions) => {
     try {
-      const currentLanguage = localStorage.getItem("lang");
+      const currentLanguage = window?.localStorage?.getItem("lang");
       const store = api.getState() as RootState;
-      const access_token = localStorage.getItem("accessToken");
+      const access_token = window?.localStorage?.getItem("accessToken");
       let baseQuery = fetchBaseQuery({
         baseUrl,
         prepareHeaders: (headers) => {
@@ -100,7 +100,7 @@ const baseQueryWithReauth =
       });
 
       let result = await baseQuery(args, api, extraOptions);
-      const refresh_token = localStorage.getItem("refreshToken");
+      const refresh_token = window?.localStorage?.getItem("refreshToken");
       if (result.error && result.error.status === 401) {
         try {
           // const store = api.getState() as RootState;

@@ -15,7 +15,7 @@ export default function Profile() {
   const router = useRouter();
   const dataUser = useAppSelector((state) => state.auth?.userInfo);
   const dispatch = useAppDispatch();
-  const accessToken = localStorage.getItem("accessToken");
+  const accessToken = window?.localStorage?.getItem("accessToken");
   const { data, isLoading } = useGetMeQuery({}, { skip: !accessToken });
   console.log("useGetMeQuery", data, isLoading);
   console.log("dataRedux", dataUser);
@@ -33,8 +33,8 @@ export default function Profile() {
     { label: "서비스이용약관" },
   ];
   const handleLogout = () => {
-    localStorage.removeItem("accessToken");
-    localStorage.removeItem("refreshToken");
+    window?.localStorage?.removeItem("accessToken");
+    window?.localStorage?.removeItem("refreshToken");
     dispatch(reset());
     router.push("/login");
   };
